@@ -18,7 +18,7 @@ var shop = (action, name, quantity) => {
       return `Sorry, ${name} has been sold out!\n`;
     }
     // if quantity is not specified by the customer, set to default 1
-    if (quantity === undefined) {
+    if (quantity === undefined || quantity.length === 0) {
       quantity = 1;
     }
 
@@ -140,10 +140,11 @@ var clearCart = () => {
 var listCart = () => {
   let cart = fetchCart();
   let list = `${cart.length} items in cart\n`;
-  for (item of cart) {
-    list += `------------------------------------\nname: ${item.title}\nprice: ${item.price}$\nquantity: ${item.quantity}\n`
-  }
-  return list;
+  // for (item of cart) {
+  //   list += `------------------------------------\nname: ${item.title}\nprice: ${item.price}$\nquantity: ${item.quantity}\n`
+  // }
+  // return list;
+  return cart;
 }
 
 module.exports = {

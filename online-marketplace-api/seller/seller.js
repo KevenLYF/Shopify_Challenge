@@ -59,7 +59,8 @@ var restock = (name, quantity) => {
   newProducts.push(product);
 
   if (updateStorage(newProducts) === SUCCESS) {
-    return `Restock successful !\nProduct: ${product.title}\nInventory: ${product.inventory_count}\n`;
+    // return `Restock successful !\nProduct: ${product.title}\nInventory: ${product.inventory_count}\n`;
+    return newProducts;
   } else {
     return `Unable to restock ${product.title}\n!`;
   }

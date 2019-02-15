@@ -17,7 +17,8 @@ var listProducts = (filter) => {
       }
     }
   }
-  return `${list + filterList}------------------------------------\n${productsInfo.length} products in storage, ${outStockCount} products out of stock.\n`;
+  // return `${list + filterList}------------------------------------\n${productsInfo.length} products in storage, ${outStockCount} products out of stock.\n`;
+  return productsInfo;
 };
 
 var fetchProducts = () => {
